@@ -38,9 +38,8 @@ To solve problems like
 * We create an X matrix of all our vector inputs which are then fed into the logistic regression classifier
 
 >Logistic Regression
-
 $$
-h(x^{(i)},\theta) = \frac{1}{1+ e^{-\theta^{T}x^{i}}}
+><img src="https://render.githubusercontent.com/render/math?math=h(x^{(i)},\theta) = \frac{1}{1+ e^{-\theta^{T}x^{i}}}">
 $$
 
 * x^{i} is the i-th tweet vector
@@ -50,7 +49,7 @@ $$
 > Cost Function
 
 $$
-J(\theta) = -\frac{1}{m}\Sigma_{i=1}^{m}[y^{(i)}\log{h(x^{i},\theta})+(1-y^{(i)})\log{(1-h(x^{i},\theta}))]
+<img src="https://render.githubusercontent.com/render/math?math=J(\theta) = -\frac{1}{m}\Sigma_{i=1}^{m}[y^{(i)}\log{h(x^{i},\theta})+(1-y^{(i)})\log{(1-h(x^{i},\theta}))]">
 $$
 
 ## WEEK 2
@@ -66,13 +65,13 @@ Outline
 > Probability
 
 $$
-P(A \cup B) \ and P(A \cap B)
+<img src="https://render.githubusercontent.com/render/math?math=P(A \cup B) \ and P(A \cap B)">
 $$
 
 > Bayes Rule
 
 $$
-P(X \mid Y) = P(Y \mid X) * \frac {P(X)}{P(Y)}
+<img src="https://render.githubusercontent.com/render/math?math=P(X \mid Y) = P(Y \mid X) * \frac {P(X)}{P(Y)}">
 $$
 
 > Naive Bayes
@@ -81,7 +80,7 @@ $$
 * Each individual ratio is the sentiment for a corresponding word in the tweet
 
 $$
-\Pi^{m}_{i=1} \frac{P(w_{i} \mid pos)}{P(w_{i} \mid neg)}
+<img src="https://render.githubusercontent.com/render/math?math=\Pi^{m}_{i=1} \frac{P(w_{i} \mid pos)}{P(w_{i} \mid neg)}">
 $$
 
 * the product we calculate using the above formula is greater than 1 for +ve tweets and less than 1 for -ve tweets
@@ -92,7 +91,8 @@ $$
 * The formula above is for two classes {Positive, Negative}
 
 $$
-which \: is \: {P(w_{i} \mid class)} = \frac{freq(w_i,class)}{N_{class}}
+<img src="https://render.githubusercontent.com/render/math?math=which \: is \: {P(w_{i} \mid class)} = \frac{freq(w_i,class)}{N_{class}}">
+
 $$
 
 * this formula is modified
@@ -107,18 +107,18 @@ $$
 > Log Likelihood
 
 $$
-Prior = \frac{P(Pos)}{P(Neg)}
+<img src="https://render.githubusercontent.com/render/math?math=Prior = \frac{P(Pos)}{P(Neg)}">
 $$
 
 $$
-Complete \:Naive \: Bayes\: Formula: \frac{P(Pos)}{P(Neg)}\Pi^{m}_{i=1} \frac{P(w_{i} \mid pos)}{P(w_{i} \mid neg)} > 1
+<img src="https://render.githubusercontent.com/render/math?math=Complete \:Naive \: Bayes\: Formula: \frac{P(Pos)}{P(Neg)}\Pi^{m}_{i=1} \frac{P(w_{i} \mid pos)}{P(w_{i} \mid neg)} > 1">
 $$
 
 * these products run the risk of underflow(won't be stored on your computer if they are too small)
 * hence we apply Log of the above score
 
 $$
-Log \:Likelikhood \:Naive \: Bayes\:: \log(\frac{P(Pos)}{P(Neg)}\Pi^{m}_{i=1} \frac{P(w_{i} \mid pos)}{P(w_{i} \mid neg)} )
+<img src="https://render.githubusercontent.com/render/math?math=Log \:Likelikhood \:Naive \: Bayes\:: \log(\frac{P(Pos)}{P(Neg)}\Pi^{m}_{i=1} \frac{P(w_{i} \mid pos)}{P(w_{i} \mid neg)} )">
 $$
 
 > Training Naive Bayes
@@ -153,7 +153,7 @@ To train Naïve Bayes model you need to:
 * For a n-dimensional vector
 
 $$
-d(v,w) = \sqrt{{{\Sigma_{i=1}^n}(v_i}-{w_i})^2}
+<img src="https://render.githubusercontent.com/render/math?math=d(v,w) = \sqrt{{{\Sigma_{i=1}^n}(v_i}-{w_i})^2}">
 $$
 
 * Norm of the compared vectors 
@@ -164,8 +164,9 @@ $$
 * Given two vectors(v,w), the dot product is computed and divided by the norm of the two individual vectors
 
 $$
-cos(\alpha) = \frac{v.w}{{\left\|{v}\right\|\left\|{w}\right\|}}
+<img src="https://render.githubusercontent.com/render/math?math=cos(\alpha) = \frac{v.w}{{\left\|{v}\right\|\left\|{w}\right\|}}">
 $$
+
 
 
 
@@ -200,22 +201,24 @@ $$
 >
 > * The transformation is performed using matrix multiplication
 >
+> *
+> <img src="https://render.githubusercontent.com/render/math?math=X - 1st\ language\ vector\\">
+> <img src="https://render.githubusercontent.com/render/math?math=Y - 2nd\ language\ vector\\">
+> <img src="https://render.githubusercontent.com/render/math?math=R - Transformation\ matrix\\">
+> <img src="https://render.githubusercontent.com/render/math?math=XR = Y">   
+>   
+>   
+>  
+>
 > * $$
->   X - 1st\ language\ vector\\
->   Y - 2nd\ language\ vector\\
->   R - Transformation\ matrix\\
->   XR = Y
+> <img src="https://render.githubusercontent.com/render/math?math=Loss = ||XR-Y||_F\\">
+> <img src="https://render.githubusercontent.com/render/math?math=Gradient\ Equation- g = \frac{d}{dR}{Loss}\\">
+> <img src="https://render.githubusercontent.com/render/math?math=Update\ Equation\ - R =  R -\alpha{g}">
 >   $$
 >
 > * $$
->   Loss = ||XR-Y||_F\\
->   Gradient\ Equation- g = \frac{d}{dR}{Loss}\\
->   Update\ Equation\ - R =  R -\alpha{g}
->   $$
->
-> * $$
->   ||A||_F = \sqrt{\Sigma_{i=1}^{m}\Sigma_{j=1}^{n}|a_{ij}|^2}\\
->   Where\ A\ is\ m*n\ matrix
+><img src="https://render.githubusercontent.com/render/math?math=||A||_F = \sqrt{\Sigma_{i=1}^{m}\Sigma_{j=1}^{n}|a_{ij}|^2}\\">
+><img src="https://render.githubusercontent.com/render/math?math=Where\ A\ is\ m*n\ matrix">   
 >   $$
 >
 >   
@@ -241,11 +244,11 @@ $$
 > >   * Given multiple planes we assign a hash value of 1 for +ve dot product and 0 for -ve dot product
 > >   * Then we multiply the hash values to the powers of 2 and add them to obtain a single hash value
 > > * Approximated nearest neighbors 
-> >   * 
+> >  
 
 > Transforming word vectors
 
-* 
+
 
 
 
