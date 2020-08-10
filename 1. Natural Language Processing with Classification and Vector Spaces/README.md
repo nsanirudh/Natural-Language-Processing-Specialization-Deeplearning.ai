@@ -1,4 +1,6 @@
-### NLP Specialization 1
+### NLP Specialization 
+
+# 1. Natural Language Processing with Classification and Vector Spaces
 
 # Notes made on Typora
 
