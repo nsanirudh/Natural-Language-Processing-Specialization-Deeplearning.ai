@@ -8,7 +8,7 @@ This repository contains my personal notes on [DeepLearning.ai](https://deeplear
 [DeepLearning.ai](https://deeplearning.ai)  contains four courses which can be taken on [Coursera](https://www.coursera.org/specializations/natural-language-processing). The four courses are:
 
 1. [Natural Language Processing with Classification and Vector Spaces](https://github.com/nsanirudh/Natural-Language-Processing-Specialization-Deeplearning.ai/tree/master/1.%20Natural%20Language%20Processing%20with%20Classification%20and%20Vector%20Spaces)
-2. [Natural Language Processing with Probabilistic Models](https://github.com/nsanirudh/Natural-Language-Processing-Specialization-Deeplearning.ai/tree/master/2.%20Natural%20Language%20Processing%20with%20Probabilistic%20Models/Week%201)
+2. [Natural Language Processing with Probabilistic Models](https://github.com/nsanirudh/Natural-Language-Processing-Specialization-Deeplearning.ai/tree/master/2.%20Natural%20Language%20Processing%20with%20Probabilistic%20Models)
 3. [Natural Language Processing with Sequence Models](#)
 4. [Natural Language Processing with Attention Models](#)
 
